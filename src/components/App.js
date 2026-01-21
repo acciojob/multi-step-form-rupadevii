@@ -5,8 +5,10 @@ import Step from "./Step";
 const App = () => {
   const [step, setStep] = useState(1)
   const [formData, setFormData] = useState({})
-  function handleSubmit(){
-    console.log(formData)
+
+  function handleSubmit(e){
+    e.preventDefault();
+    console.log(formData);
   }
 
   return (
