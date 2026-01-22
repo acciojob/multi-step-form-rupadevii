@@ -13,9 +13,9 @@ const Step = ({step, formData, setFormData, setStep, handleSubmit}) => {
     }
     
     return (
-        <form>
+        <form id={`step${step}`}>
         {step===1 && (
-            <div className='form' id="step1">
+            <div className='form'>
                 <h1>Customer Details</h1>
                 <label htmlFor="first_name">First Name:</label>
                 <input 
@@ -41,7 +41,7 @@ const Step = ({step, formData, setFormData, setStep, handleSubmit}) => {
             </div>
         )}
         {step===2 && (
-            <div className='form' id="step2">
+            <div className='form'>
                 <h1>Car Details</h1>
                 <label htmlFor="model">Model:</label>
                 <input 
@@ -70,7 +70,7 @@ const Step = ({step, formData, setFormData, setStep, handleSubmit}) => {
             </div>
         )}
         {step===3 && (
-            <div className='form' id="step3">
+            <div className='form'>
                 <h1>Payment Details</h1>
                 <label htmlFor="card_info">Credit Card Number:</label>
                 <input 
